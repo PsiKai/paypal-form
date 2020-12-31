@@ -2,7 +2,6 @@ import React, {useRef, useEffect, Fragment} from 'react'
 
 const PayPal = (props) => {
     const paypal = useRef()
-    console.log(props.price);
 
     useEffect(() => {
         window.paypal.Buttons({
@@ -29,7 +28,7 @@ const PayPal = (props) => {
                 console.log(err);
             }
         }).render(paypal.current)
-    }, [props.price])
+    }, [])
 
     return (
         <Fragment>
